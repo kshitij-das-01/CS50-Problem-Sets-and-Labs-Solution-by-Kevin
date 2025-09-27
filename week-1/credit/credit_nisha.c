@@ -14,15 +14,15 @@ int main(void)
         scanf("%ld", &num);
     }
     while (num < 0);
-    
+
     // get the number of digits in the number
     int length = number_length(num);
 
     // validity of credit card number as per length of digits
     if (length != 13 && length != 15 && length != 16)
     {
-        printf("Invalid Input\n");
-        return 1;
+        printf("INVALID\n");
+        return 0;
     }
 
     // Calculate the checksum of luhn algorithm and store it in result
@@ -31,8 +31,8 @@ int main(void)
     // Checking if the modulo is equal to 0
     if (result % 10 != 0)
     {
-        printf("Invalid Credit Card Number\n");
-        return 2;
+        printf("INVALID\n");
+        return 0;
     }
 
     // Variables to check the digits of from the start
@@ -51,31 +51,31 @@ int main(void)
     s2 = start % 10;
     s1 = start / 10;
 
-        // AMEX Validy of CC
-        if (length == 15 && (s1 == 3 && (s2 == 4 || s2 == 7)))
-        {
-            printf("American Express\n");
-            return 0;
-        }
+    // AMEX Validy of CC
+    if (length == 15 && (s1 == 3 && (s2 == 4 || s2 == 7)))
+    {
+        printf("AMEX\n");
+        return 0;
+    }
 
-        // MasterCard Validy of CC
-        if (length == 16 && (s1 == 5 && (s2 == 1 || s2 == 2 || s2 == 3 || s2 == 4 || s2 == 5)))
-        {
-            printf("MasterCard\n");
-            return 0;
-        }
+    // MasterCard Validy of CC
+    if (length == 16 && (s1 == 5 && (s2 == 1 || s2 == 2 || s2 == 3 || s2 == 4 || s2 == 5)))
+    {
+        printf("MASTERCARD\n");
+        return 0;
+    }
 
-        // VISA Validy of CC
-        if ((length == 13 || length == 16) && s1 == 4)
-        {
-            printf("VISA\n");
-            return 0;
-        }
+    // VISA Validy of CC
+    if ((length == 13 || length == 16) && s1 == 4)
+    {
+        printf("VISA\n");
+        return 0;
+    }
 
-        else
-        {
-            printf("Not a Valid Credit Card");
-        }
+    else
+    {
+        printf("INVALID");
+    }
 
     // Just some fancy code to put a new line, to maintain aesthetics and looks of terminal
     printf("\n");
@@ -91,7 +91,7 @@ int number_length(long cc)
     {
         cc = cc / 10;
         len++;
-    }    
+    }
     return len;
 }
 
