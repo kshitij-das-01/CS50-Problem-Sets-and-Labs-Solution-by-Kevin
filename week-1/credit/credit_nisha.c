@@ -1,4 +1,3 @@
-#include <cs50.h>
 #include <stdio.h>
 
 // Prototypes
@@ -11,7 +10,8 @@ int main(void)
     long num = 0;
     do
     {
-        num = get_long("Number: ");
+        printf("Number: ");
+        scanf("%ld", &num);
     }
     while (num < 0);
     
