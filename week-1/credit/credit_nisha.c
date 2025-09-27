@@ -2,7 +2,7 @@
 
 // Prototypes
 int number_length(long cc);
-int luhn_algorithm(long x, int len);
+int luhn_checksum(long x, int len);
 
 int main(void)
 {
@@ -26,7 +26,7 @@ int main(void)
     }
 
     // Calculate the checksum of luhn algorithm and store it in result
-    int result = luhn_algorithm(num, length);
+    int result = luhn_checksum(num, length);
 
     // Checking if the modulo is equal to 0
     if (result % 10 != 0)
@@ -96,7 +96,7 @@ int number_length(long cc)
 }
 
 // To calculate the checksum of luhn algorithm
-int luhn_algorithm(long x, int len)
+int luhn_checksum(long x, int len)
 {
     // variables for the formula calculation
     int last1 = 0;
