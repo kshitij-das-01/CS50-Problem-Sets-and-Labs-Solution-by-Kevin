@@ -10,7 +10,7 @@ sort3 uses: TODO
 
 How do you know?: TODO
 
-Submitted:
+Submitted :
 sort1 uses: bubble sort
 
 How do you know?: It takes about the same amount of time in reverse sorted text as sort3, also the times are faster when text is sorted. Takes moderate time when the set size increases.
