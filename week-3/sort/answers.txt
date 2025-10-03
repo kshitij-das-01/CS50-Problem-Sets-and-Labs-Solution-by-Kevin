@@ -1,0 +1,24 @@
+sort1 uses: TODO
+
+How do you know?: TODO
+
+sort2 uses: TODO
+
+How do you know?: TODO
+
+sort3 uses: TODO
+
+How do you know?: TODO
+
+Submitted:
+sort1 uses: bubble sort
+
+How do you know?: It takes about the same amount of time in reverse sorted text as sort3, also the times are faster when text is sorted. Takes moderate time when the set size increases.
+
+sort2 uses: merge sort
+
+How do you know?: It always delivers the lowest times in the record, also it iterates differently. Doesn't delay in runtime also in high number of set. Also the lower and upper bound is in similar range.
+
+sort3 uses: selection sort
+
+How do you know?: Takes moderate to high time depending upon sorted, reverse and random text. It takes longest in comparsion when the text is sorted, but also the most in reversed and random.
